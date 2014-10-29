@@ -1,0 +1,13 @@
+{
+  "name": "proj1",
+  "version": "0.0.0",
+  "authors": [
+    "krishnateja262"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.4.2",
+    "core-elements": "Polymer/core-elements#~0.4.2"
+  }
+}
