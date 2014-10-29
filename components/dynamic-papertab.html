@@ -1,5 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../filter/polymer-filters.html">
 <polymer-element name="dynamic-papertab" attributes="tabs">
   <template>
     <style>
@@ -10,7 +11,6 @@
 	      -moz-user-select: none;
 	      -ms-user-select: none;
 	      user-select: none;
-	      text-transform: uppercase;
 	    }
 	    @media (min-width: 481px) {
 	      #tabs {
@@ -25,7 +25,7 @@
     <!-- CARD CONTENTS GO HERE -->
     <paper-tabs selected="0" id="tabs" self-end>
           <template repeat="{{item in items}}">
-	    	<paper-tab>{{item}}</paper-tab>
+	    	<paper-tab>{{item | capitalize}}</paper-tab>
 	      </template>
     </paper-tabs>
   </template>
@@ -34,7 +34,6 @@
   	items : [],
   	ready: function(){
   		this.items = this.tabs.split(' ');
-  		console.log(this.tabs);
   	}
   });
   </script>
